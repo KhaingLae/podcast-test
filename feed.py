@@ -17,7 +17,7 @@ with open('feed.yaml', 'r')as file:
     xml_tree.SubElement(channel_elmement, 'itunes:image', {'href' : link_prefix+ yaml_data['image']})
     xml_tree.SubElement(channel_elmement, 'launguage').text = yaml_data['language']
     xml_tree.SubElement(channel_elmement, 'link').text = link_prefix
-    xml_tree.SubElement(channel_elmement, 'itune:category', {'text': yaml_data['category']})
+    xml_tree.SubElement(channel_elmement, 'itunes:category', {'text': yaml_data['category']})
 
     for item in yaml_data['item']:
         item_element = xml_tree.SubElement(channel_elmement, 'item')
